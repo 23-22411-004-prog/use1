@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a001a, #000000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background glow animation */
+body::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #ff2d75;
+  filter: blur(150px);
+  animation: moveGlow 6s infinite alternate;
+}
+
+@keyframes moveGlow {
+  0% { transform: translate(-100px, -100px); }
+  100% { transform: translate(150px, 150px); }
+}
+
+/* Card */
+.card {
+  position: relative;
+  padding: 50px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 40px rgba(255, 0, 120, 0.4);
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Heading animation */
+h1 {
+  font-size: 32px;
+  color: #ff4d88;
+  margin-bottom: 20px;
+  animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #ff4d88; }
+  to { text-shadow: 0 0 25px #ff1a66, 0 0 40px #ff1a66; }
+}
+
+/* Typing effect */
+.typing {
+  font-size: 20px;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Countdown style */
+.timer {
+  margin-top: 25px;
+  font-size: 28px;
+  color: #ffffff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); color: #fff; }
+  50% { transform: scale(1.2); color: #ff4d88; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+  <h1>Hey Beautiful 💕</h1>
+
+  <div class="typing">
+    Happy Birthday 🎂
+  </div>
+
+  <div class="timer">
+    ⏳ 59 mins left
+  </div>
+</div>
+
+</body>
+</html>
